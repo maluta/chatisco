@@ -19,21 +19,21 @@
             min-height: 100vh;
             background-color: #f5f5f5;
             font-family: 'Inter', sans-serif;
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .title-section {
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             position: relative;
         }
 
         .title {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-weight: 900;
             text-transform: uppercase;
             color: #000;
@@ -47,7 +47,7 @@
         .subtitle {
             font-family: 'Space Mono', monospace;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #FF5733;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -55,20 +55,20 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 10px;
         }
 
         .card {
             background: #ffffff;
-            border: 3px solid #000;
-            border-radius: 15px;
-            padding: 25px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 20px;
             position: relative;
             cursor: pointer;
             transition: all 0.2s ease;
-            box-shadow: 8px 8px 0 #000;
+            box-shadow: 6px 6px 0 #000;
         }
 
         .card::before {
@@ -78,7 +78,7 @@
             background: radial-gradient(circle at 50% 0%, 
                 rgba(255,87,51,0.15), 
                 transparent 60%);
-            border-radius: 12px;
+            border-radius: 8px;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -88,17 +88,17 @@
         }
 
         .card:hover {
-            transform: translate(-5px, -5px);
-            box-shadow: 13px 13px 0 #000;
+            transform: translate(-3px, -3px);
+            box-shadow: 10px 10px 0 #000;
         }
 
         .card img {
             width: 100%;
-            height: 180px;
+            height: 120px;
             object-fit: cover;
-            border: 3px solid #000;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            margin-bottom: 10px;
             background: #f0f0f0;
         }
 
@@ -109,16 +109,16 @@
         .card a {
             text-decoration: none;
             display: block;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
         .card-title {
             font-family: 'Inter', sans-serif;
             font-weight: 800;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #000;
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             position: relative;
         }
 
@@ -126,21 +126,21 @@
             background: #FF5733;
             color: #fff;
             font-family: 'Space Mono', monospace;
-            font-size: 0.8rem;
-            padding: 5px 10px;
+            font-size: 0.7rem;
+            padding: 4px 8px;
             border-radius: 5px;
             display: inline-block;
             position: absolute;
-            top: -10px;
-            right: -10px;
+            top: -20px;
+            right: -20px;
             border: 2px solid #000;
             transform: rotate(3deg);
         }
 
         .highlight {
             background: #FFE66D;
-            transform: translate(-5px, -5px);
-            box-shadow: 13px 13px 0 #000;
+            transform: translate(-3px, -3px);
+            box-shadow: 10px 10px 0 #000;
         }
 
         .blink {
@@ -150,21 +150,21 @@
         @keyframes neoBrutalistBlink {
             0%, 100% { 
                 background: #FFE66D;
-                transform: translate(-5px, -5px) scale(1.02);
+                transform: translate(-3px, -3px) scale(1.02);
             }
             50% { 
                 background: #FF5733;
-                transform: translate(-5px, -5px) scale(0.98);
+                transform: translate(-3px, -3px) scale(0.98);
             }
         }
 
         .hover-info {
             position: absolute;
-            bottom: -25px;
+            bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Space Mono', monospace;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: #667;
             white-space: nowrap;
             opacity: 0;
@@ -181,16 +181,16 @@
             }
 
             .title {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             .grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
 
             .card {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
             }
         }
     </style>
@@ -205,7 +205,6 @@
     </div>
 
     <script>
-
         const assistants = [
             {
                 url: 'https://chat.openai.com',
@@ -241,7 +240,7 @@
                 url: 'https://duckduckgo.com/chat',
                 name: 'DuckDuckGo',
                 image: './assets/img/duck_duck_go_logo.jpeg',
-                badge: ''
+                badge: 'Privacy respected'
             },
             {
                 url: 'https://meta.ai',
@@ -261,8 +260,6 @@
                 image: './assets/img/mistralai_logo.jpeg',
                 badge: ''
             }
-        
-
         ];   
 
         const grid = document.getElementById('assistantGrid');
